@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Swagger UI</title>
+  <link rel="stylesheet" type="text/css" href="/dist/swagger-ui.css">
+</head>
+
+<body>
+  <div id="swagger-ui"></div>
+  <script src="/dist/swagger-ui-bundle.js"> </script>
+  <script>
+    window.onload = function () {
+      // Especifica la URL de tu documentación Swagger generada por flask-swagger.
+      const ui = SwaggerUIBundle({
+        url: "/apidocs",
+        dom_id: "#swagger-ui",
+        deepLinking: true,
+      });
+    };
+  </script>
+</body>
+
+</html>
